@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  Your challenge, should you choose to accept it, is to add some jQuery such that:
+  1) the Red! button makes the box turn red
+  2) the Blue! button makes the box turn blue
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS Practice 2</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+
+      
+    $(function() {
+
+      
+      $('button').click(function(){
+        
+    var name = $('#name').val();
+        console.log(name);
+        
+        var title = $('#title').val();
+        console.log(title);
+        
+         var myselect = $("#myselect").val();
+        console.log(myselect);
+        
+         var story = $('span').html(title +" award " + name + " and you have won " + myselect +" award ");
+        console.log(story);
+        
+              $('span').hover(function(){
+        $(this).css('color','red')
+      })
+
+    
+    });
+    });
+  </script>
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <h1>Create your own award!</h1>
+Name: <input id="name"><br>
+Title of award: <input id="title"><br>
+What would your dream achievement be? <select id="myselect">
+    <option value="Mathematics">Mathematics</option>
+    <option value="Physics">Physics</option>
+    <option value="English">English</option>
+    <option value="History">History</option>
+    <option value="Computer science">Computer science</option>
+</select><br>
+<button>Generate Madlib!</button>
+<span></span>
+</body>
+
+</html>
